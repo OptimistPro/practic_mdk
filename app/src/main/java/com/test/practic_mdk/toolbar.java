@@ -22,19 +22,34 @@ public class toolbar extends Fragment implements View.OnClickListener{
         View view = inflater.inflate(R.layout.fragment_toolbar, container, false);
         ImageButton button1 = (ImageButton) view.findViewById(R.id.home);
         ImageButton button2 = (ImageButton) view.findViewById(R.id.users);
+        ImageButton button3 = (ImageButton) view.findViewById(R.id.camera);
+        ImageButton button4 = (ImageButton) view.findViewById(R.id.colors);
         button1.setOnClickListener(this);
         button2.setOnClickListener(this);
+        button3.setOnClickListener(this);
+        button4.setOnClickListener(this);
         return view;
     }
 
 
     public void onClick(View v){
-        switch (v.getId()){
-            case R.id.home:
-                Intent intent = new Intent(getActivity(),MainActivity.class);
-                startActivity(intent);
-
+        if (v.getId()==R.id.home){
+            Intent intent = new Intent(getActivity(),MainActivity.class);
+            startActivity(intent);
         }
+        if (v.getId()==R.id.camera){
+            Intent intent = new Intent(getActivity(),camera.class);
+            startActivity(intent);
+        }
+        if (v.getId()==R.id.users){
+            Intent intent = new Intent(getActivity(),user.class);
+            startActivity(intent);
+        }
+        if (v.getId()==R.id.colors){
+            Intent intent = new Intent(getActivity(),galerea.class);
+            startActivity(intent);
+        }
+
 
     }
 

@@ -20,6 +20,8 @@
         android:supportsRtl="true"
         android:testOnly="true"
         android:theme="@style/AppTheme" >
+        <activity android:name="com.test.practic_mdk.galerea" />
+        <activity android:name="com.test.practic_mdk.camera" />
         <activity android:name="com.test.practic_mdk.user" />
         <activity android:name="com.test.practic_mdk.MainActivity" >
             <intent-filter>
